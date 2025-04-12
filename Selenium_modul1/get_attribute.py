@@ -32,9 +32,8 @@ try:
     input_1.send_keys(y) # вставляем результат функции в элемент в который нужно его вставить
 
 
-    CH1 = browser.find_element(By.XPATH, '//*[@id="robotCheckbox"]')
-    # ищем чекбокс на странице
-    CH1.click() # кликаем на чекбокс
+    CH1 = browser.find_element(By.XPATH, '//*[@id="robotCheckbox"]').click()
+    # ищем чекбокс на странице # кликаем на чекбокс
     Rule2 = browser.find_element(By.XPATH, '//*[@id="robotsRule"]')
     # ищем нужную радиокнопку
     Rule2.click() # кликаем на радиокнопку

@@ -9,8 +9,7 @@ try:
 
     input1 = browser.find_element(By.CSS_SELECTOR, 'input[placeholder="Input your first name"]')
     input1.send_keys("Test1")
-    input2 = browser.find_element(By.CSS_SELECTOR, 'input[placeholder="Input your last name"]')
-    input2.send_keys("Test2")
+    input2 = browser.find_element(By.CSS_SELECTOR, 'input[placeholder="Input your last name"]').send_keys("Test2")
     input3 = browser.find_element(By.CSS_SELECTOR,'input[placeholder="Input your email"]')
     input3.send_keys("Test3")
   
