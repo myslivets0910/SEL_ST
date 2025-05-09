@@ -6,7 +6,7 @@ import time
 
 class TestRegistration(unittest.TestCase):
     def setUp(self): # setUp - метод, который выполняется перед каждым тестом и запускает браузер
-        self.link1 = "http://suninjuly.github.io/registration1.html"
+        self.link1 = "  http://suninjuly.github.io/registration1.html"
         self.link2 = "http://suninjuly.github.io/registration2.html"
         self.browser = webdriver.Chrome()
 
