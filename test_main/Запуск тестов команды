@@ -1,0 +1,28 @@
+python -m pytest test_UniTest_3_2_v2.py - запуск конкретного файла
+python -m pytest - запуск директория
+python -m pytest -v test_UniTest_3_2_v2.py   запуск с отчетом
+python -m pytest test_abs.py -v --tb=line - красивый вид
+
+python -m pytest test_UniTest_3_2_v2.py -v --tb=line - красивый вид
+
+python -m pytest -m regression test_fixture8.py -v --tb=line  - запуск теста с маркировкой тестов,
+                                                                в данном случае маркировка -m regression
+                                                                в файле pytest.ini в корне test_main
+
+python -m pytest -m "not smoke" test_fixture8.py -v --tb=line - запуск теста с маркировкой тестов, исключающие smoke-тесты
+                                                                в данном случае маркировка -m "not smoke"
+
+python -m pytest -m "smoke or regression" test_fixture8.py -v --tb=line - запуск теста с маркировкой тестов, включающие в себя объединение
+                                                                          smoke и regression-тесты
+                                                                          в данном случае маркировка -m "smoke or regression"
+
+python -m pytest test_fixture10.py -s -v -rx --tb=line - запуск теста с параметрами xfail (место бага знаем, ждем когда поправят)
+                                                         выводит в консоль что именно за тест падает, но причину знаем.
+                                                         Если после того как разраб запушит фикс, тест пройдет с пометкой XPASS
+
+pytest -m "smoke or regression" --browser_name=firefox test_login.py - запуск теста с указанием конкретного браузера,
+                                                                       в данном случает "firefox"
+
+python -m pytest test_rerun.py -v --tb=line --reruns 1 -   "--reruns 1" указатель количества перезапусков для каждого из упавших тестов,
+                                                            нужно добавить в командную строку параметр:"--reruns n",
+                                                            где n — это количество перезапусков
